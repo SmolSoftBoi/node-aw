@@ -1,4 +1,3 @@
-import { isArray, isString } from 'lodash';
 import { HttpClient } from 'typed-rest-client/HttpClient';
 
 type CatalogDataFeed = {
@@ -6,13 +5,13 @@ type CatalogDataFeed = {
         field_code: string,
         field_description: string,
     }[],
-    data: any[][]
+    data: unknown[][]
 }
 
 type CatalogData = CatalogDataItem[];
 
 type CatalogDataItem = {
-    [key: string]: any;
+    [key: string]: unknown;
 };
 
 type Products = CatalogData;
@@ -35,21 +34,27 @@ export default class AWDropship {
         this.catalogData = catalogDataFeed.data.map(value => {
             return Object.fromEntries(catalogDataFeed.schema.map((field, index) => {
                 const fieldCode = field.field_code;
-                let fieldValue: any = value[index];
+                let fieldValue: unknown = value[index];
                 
-                if (isString(fieldValue)) {
-                    if (fieldCode.endsWith('_datetime')) fieldValue = new Date(fieldValue);
-                    if (fieldCode.endsWith('_outer')) fieldValue = parseFloat(fieldValue);
-                    if (fieldCode.endsWith('_price')) fieldValue = parseFloat(fieldValue);
-                    if (fieldCode.endsWith('_rate')) fieldValue = parseFloat(fieldValue);
-                    if (fieldCode.endsWith('_rrp')) fieldValue = parseFloat(fieldValue);
-                    if (fieldCode.endsWith('_weight')) fieldValue = parseFloat(fieldValue);
+                if (typeof fieldValue === 'string') {
+                    switch (fieldValue.split('_').pop()) {
+                        case 'datetime':
+                            fieldValue = new Date(fieldValue);
+                            break;
+                        case 'outer':
+                        case 'price':
+                        case 'rate':
+                        case 'rrp':
+                        case 'weight':
+                            fieldValue = parseFloat(fieldValue);
+                            break;
+                    }
                 }
 
-                if (isArray) {
+                if (fieldValue instanceof Array) {
                     if (fieldCode === 'images') {
                         fieldValue = fieldValue.map(value => {
-                            if (isString(value)) {
+                            if (typeof fieldValue === 'string') {
                                 if (value.length > 0) value = new URL(value);
                             }
 
