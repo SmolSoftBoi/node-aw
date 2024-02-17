@@ -14,7 +14,7 @@ type CatalogDataItem = {
     [key: string]: unknown;
 };
 
-type Products = CatalogData;
+export type Products = CatalogData;
 
 export default class AWDropship {
     private catalogDataFeedUrl = new URL('https://aw-dropship.com/ar_web_catalog_data_feed.php?output=Json&scope=website&scope_key=18');
