@@ -71,8 +71,6 @@ export default class AWDropship {
     }
 
     public async getProducts(): Promise<Products> {
-        await this.getCatalogDataFeed();
-
-        return this.catalogData;
+        return await this.getCatalogDataFeed();
     }
 }
