@@ -24,7 +24,6 @@
     "typed-rest-client": "^1.8.9"
   },
   "devDependencies": {
-    "@types/commander": "^2.12.2",
     "@types/jest": "^29.2.6",
     "@types/lodash": "^4.14.191",
     "@types/node": "^18.11.18",
