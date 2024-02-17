@@ -14,8 +14,8 @@
     "lint": "eslint src/**.ts --max-warnings=0",
     "test": "jest --forceExit --detectOpenHandles",
     "build": "rimraf ./dist && tsc",
-    "watch": "npm run build && nodemon",
-    "prepublishOnly": "npm run lint && npm run build"
+    "watch": "yarn run build && nodemon",
+    "prepublishOnly": "npm run lint && yarn run build"
   },
   "dependencies": {
     "commander": "^10.0.0",

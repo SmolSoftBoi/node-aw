@@ -24,7 +24,9 @@ export default class AWDropship {
     private catalogData: CatalogData | undefined;
     
     private async getCatalogDataFeed(): Promise<CatalogData> {
-        if (this.catalogData) return this.catalogData;
+        if (this.catalogData) {
+          return this.catalogData;
+        }
 
         const response = await this.client.get(this.catalogDataFeedUrl.href);
         const body = await response.readBody();
@@ -51,16 +53,14 @@ export default class AWDropship {
                     }
                 }
 
-                if (fieldValue instanceof Array) {
-                    if (fieldCode === 'images') {
-                        fieldValue = fieldValue.map(value => {
-                            if (typeof fieldValue === 'string') {
-                                if (value.length > 0) value = new URL(value);
-                            }
-
-                            return value;
-                        });
-                    }
+                if (fieldValue instanceof Array && fieldCode === 'images') {
+                      fieldValue = fieldValue.map(value => {
+                          if (typeof fieldValue === 'string' && value.length > 0) {
+                                value = new URL(value);
+                          }
+                
+                          return value;
+                      });
                 }
 
                 return [fieldCode, fieldValue];
