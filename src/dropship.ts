@@ -14,7 +14,7 @@ type CatalogDataItem = {
     [key: string]: unknown;
 };
 
-export type Products = CatalogData;
+export type Products = Product[];
 
 export type Product = CatalogDataItem;
 
