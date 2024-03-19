@@ -3592,7 +3592,7 @@ __metadata:
     commander: ^12.0.0
     eslint: ^8.57.0
     jest: ^29.3.1
-    nodemon: ^3.0.3
+    nodemon: ^3.1.0
     rimraf: ^5.0.5
     source-map-support: ^0.5.21
     ts-jest: ^29.0.5
@@ -3637,23 +3637,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nodemon@npm:^3.0.3":
-  version: 3.0.3
-  resolution: "nodemon@npm:3.0.3"
+"nodemon@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "nodemon@npm:3.1.0"
   dependencies:
-    chokidar: "npm:^3.5.2"
-    debug: "npm:^4"
-    ignore-by-default: "npm:^1.0.1"
-    minimatch: "npm:^3.1.2"
-    pstree.remy: "npm:^1.1.8"
-    semver: "npm:^7.5.3"
-    simple-update-notifier: "npm:^2.0.0"
-    supports-color: "npm:^5.5.0"
-    touch: "npm:^3.1.0"
-    undefsafe: "npm:^2.0.5"
+    chokidar: ^3.5.2
+    debug: ^4
+    ignore-by-default: ^1.0.1
+    minimatch: ^3.1.2
+    pstree.remy: ^1.1.8
+    semver: ^7.5.3
+    simple-update-notifier: ^2.0.0
+    supports-color: ^5.5.0
+    touch: ^3.1.0
+    undefsafe: ^2.0.5
   bin:
     nodemon: bin/nodemon.js
-  checksum: 689f260e1c63b7dfdc1f8acb491c01fe1a03dbd93505b9e5dc94c6c683f9b8e0cf7d136a1274fb8f038f82b25ea59042db740e61014b8fed2f13ff441ba4b36c
+  checksum: 8/0b721f66ee60d9bf092f6101965bc65769698fa2921d0283d90bbf3f0906aa4f3ac77316682375bd7f09c91679fddb131aa39f9fc839fea57061bbc8e81b60e3
   languageName: node
   linkType: hard
 
