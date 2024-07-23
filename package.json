@@ -19,7 +19,7 @@
     "prepublishOnly": "yarn run lint && yarn run build"
   },
   "dependencies": {
-    "commander": "^12.0.0",
+    "commander": "^12.1.0",
     "source-map-support": "^0.5.21",
     "typed-rest-client": "^1.8.9"
   },
