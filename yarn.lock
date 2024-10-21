@@ -951,13 +951,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jest@npm:^29.2.6":
-  version: 29.5.12
-  resolution: "@types/jest@npm:29.5.12"
+"@types/jest@npm:^29.5.13":
+  version: 29.5.13
+  resolution: "@types/jest@npm:29.5.13"
   dependencies:
     expect: "npm:^29.0.0"
     pretty-format: "npm:^29.0.0"
-  checksum: 10/312e8dcf92cdd5a5847d6426f0940829bca6fe6b5a917248f3d7f7ef5d85c9ce78ef05e47d2bbabc40d41a930e0e36db2d443d2610a9e3db9062da2d5c904211
+  checksum: 10c0/9c31af0b155387b9860908830de63c6b79011d7c87c8b61b39da124e26e55423dd51b006749aafe4f0ef3a065016619a1f93ef4b055157d43727f448e67824b7
   languageName: node
   linkType: hard
 
@@ -3577,7 +3577,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "node-aw@workspace:."
   dependencies:
-    "@types/jest": "npm:^29.2.6"
+    "@types/jest": "npm:^29.5.13"
     "@types/lodash": "npm:^4.17.10"
     "@types/node": "npm:^22.7.4"
     "@typescript-eslint/eslint-plugin": "npm:^8.9.0"
