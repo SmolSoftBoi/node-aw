@@ -3647,7 +3647,7 @@ __metadata:
     rimraf: ^5.0.5
     source-map-support: ^0.5.21
     ts-jest: ^29.2.5
-    typed-rest-client: ^2.0.2
+    typed-rest-client: ^2.1.0
     typescript: ^5.5.4
   bin:
     aw: bin/aw
@@ -4588,16 +4588,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typed-rest-client@npm:^2.0.2":
-  version: 2.0.2
-  resolution: "typed-rest-client@npm:2.0.2"
+"typed-rest-client@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "typed-rest-client@npm:2.1.0"
   dependencies:
-    des.js: "npm:^1.1.0"
-    js-md4: "npm:^0.3.2"
-    qs: "npm:^6.10.3"
-    tunnel: "npm:0.0.6"
-    underscore: "npm:^1.12.1"
-  checksum: f1d9a0ffd5b7266f01df9ea4eb08b8da04793cf6902d82b3c6a46d1328cdefe80bb0cfc8f96afa645077c234ec218d8b16f642da35c1e2f1adf3d61a5904d8d1
+    des.js: ^1.1.0
+    js-md4: ^0.3.2
+    qs: ^6.10.3
+    tunnel: 0.0.6
+    underscore: ^1.12.1
+  checksum: 0877215291c11ee100620510cf0e25e1c594b8a73722d896fe4f032a18a477b285062627f5536af7695f79c28341af9ac0f192723a7d8d7b3a755925491406cb
   languageName: node
   linkType: hard
 
