@@ -34,7 +34,7 @@
     "nodemon": "^3.1.10",
     "rimraf": "^5.0.5",
     "ts-jest": "^29.3.2",
-    "typescript": "^5.7.3"
+    "typescript": "^5.8.3"
   },
   "engines": {
     "node": ">=18.0.0"
