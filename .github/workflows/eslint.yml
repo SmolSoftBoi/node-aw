@@ -32,13 +32,14 @@ jobs:
 
       - name: Install
         run: |
-          yarn install
-          yarn add @microsoft/eslint-formatter-sarif@2.1.7
+          yarn install --immutable
+          yarn add --dev --no-lockfile @microsoft/eslint-formatter-sarif@2.1.7
 
       - name: Run ESLint
-        run: yarn lint
-          --format @microsoft/eslint-formatter-sarif
-          --output-file eslint-results.sarif
+        run: |
+          yarn lint \
+            --format node_modules/@microsoft/eslint-formatter-sarif/sarif.js \
+            --output-file eslint-results.sarif
         continue-on-error: true
 
       - name: Upload analysis results to GitHub
